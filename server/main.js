@@ -31,7 +31,8 @@ function onRoute(req, res, next){
 
 
 const middleware = ConnectRoute(function(router){
-	router.get('/:token',(req)=> onRoute);
+	router.get('/:token', onRoute);
+	
 });
 
 WebApp.connectHandlers.use(middleware);
